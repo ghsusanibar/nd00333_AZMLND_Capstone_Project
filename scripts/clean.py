@@ -20,7 +20,7 @@ args = parser.parse_args()
 # print("Argument 2(output cleaned data path): %s" % args.output_clean)
 # -
 
-useful_columns = [s.strip().strip("'") for s in args.useful_columns.strip("[]").split(";")]
+useful_columns = [s.strip().strip("'") for s in args.useful_columns.strip("[]").split("\;")]
 
 new_df = (raw_data.to_pandas_dataframe().dropna(how='all'))[useful_columns]
 

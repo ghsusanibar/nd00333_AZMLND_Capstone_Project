@@ -92,3 +92,158 @@ Traceback:
 
 ExceptionTarget: Unspecified
 2020-11-13 21:59:29.340 - WARNING - 32546 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.
+2020-11-14 15:50:26.150 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-14 15:50:26.153 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.18.0.*
+2020-11-14 15:50:26.153 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-14 15:50:26.153 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-14 15:50:26.154 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-14 15:50:26.154 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-14 15:50:26.154 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-14 15:50:26.154 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-14 15:50:26.154 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-14 15:50:26.155 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-14 15:50:26.155 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-14 15:50:26.155 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-14 15:50:26.155 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-14 15:50:26.156 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-14 15:50:26.156 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-14 15:50:26.156 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-14 15:50:26.156 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-14 15:50:26.159 - INFO - 5701 - azureml.train.automl._azureautomlclient._validate_input:625 - Start data validation.
+2020-11-14 15:50:26.195 - CRITICAL - 5701 - azureml.train.automl._azureautomlclient.log_traceback:222 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 632, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 59, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-14 15:50:26.196 - WARNING - 5701 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.
+2020-11-14 16:05:53.583 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-14 16:05:53.583 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.18.0.*
+2020-11-14 16:05:53.584 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-14 16:05:53.584 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-14 16:05:53.584 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-14 16:05:53.585 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-14 16:05:53.585 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-14 16:05:53.585 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-14 16:05:53.586 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-14 16:05:53.586 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-14 16:05:53.586 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-14 16:05:53.586 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-14 16:05:53.586 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-14 16:05:53.587 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-14 16:05:53.587 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-14 16:05:53.587 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-14 16:05:53.587 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-14 16:05:53.605 - INFO - 5701 - azureml.train.automl._azureautomlclient._validate_input:625 - Start data validation.
+2020-11-14 16:05:53.606 - CRITICAL - 5701 - azureml.train.automl._azureautomlclient.log_traceback:222 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 632, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 59, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-14 16:05:53.609 - WARNING - 5701 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.
+2020-11-14 16:11:43.236 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-14 16:11:43.236 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.18.0.*
+2020-11-14 16:11:43.236 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-14 16:11:43.237 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-14 16:11:43.251 - INFO - 5701 - azureml.train.automl._azureautomlclient._validate_input:625 - Start data validation.
+2020-11-14 16:11:43.260 - CRITICAL - 5701 - azureml.train.automl._azureautomlclient.log_traceback:222 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 632, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 59, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-14 16:11:43.261 - WARNING - 5701 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.
+2020-11-14 16:18:32.214 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-14 16:18:32.214 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.18.0.*
+2020-11-14 16:18:32.217 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-14 16:18:32.217 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-14 16:18:32.217 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-14 16:18:32.218 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-14 16:18:32.219 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-14 16:18:32.220 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-14 16:18:32.229 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-14 16:18:32.230 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-14 16:18:32.231 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-14 16:18:32.231 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-14 16:18:32.235 - INFO - 5701 - azureml.train.automl._azureautomlclient._validate_input:625 - Start data validation.
+2020-11-14 16:18:32.244 - CRITICAL - 5701 - azureml.train.automl._azureautomlclient.log_traceback:222 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 632, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 59, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-14 16:18:32.245 - WARNING - 5701 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.
+2020-11-14 16:23:58.637 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-14 16:23:58.638 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.18.0.*
+2020-11-14 16:23:58.638 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-14 16:23:58.639 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-14 16:23:58.639 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-14 16:23:58.639 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-14 16:23:58.640 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-14 16:23:58.644 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-14 16:23:58.656 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-14 16:23:58.657 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-14 16:23:58.657 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-14 16:23:58.657 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-14 16:23:58.657 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-14 16:23:58.665 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-14 16:23:58.666 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-14 16:23:58.666 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-14 16:23:58.668 - INFO - 5701 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-14 16:23:58.675 - INFO - 5701 - azureml.train.automl._azureautomlclient._validate_input:625 - Start data validation.
+2020-11-14 16:23:58.687 - CRITICAL - 5701 - azureml.train.automl._azureautomlclient.log_traceback:222 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 632, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 59, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-14 16:23:58.689 - WARNING - 5701 - azureml.train.automl._azureautomlclient._validate_input:640 - Validation service meet exceptions, continue training now.

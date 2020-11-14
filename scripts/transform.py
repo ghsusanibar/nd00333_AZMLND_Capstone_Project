@@ -1,6 +1,15 @@
+# +
 import argparse
 import os
 from azureml.core import Run
+
+import pandas as pd
+from scipy import stats
+from scipy.stats import skew, boxcox_normmax
+from scipy.special import boxcox1p
+
+
+# -
 
 def one_hot_encoding(dataset, feature):
     dummy_dataset = pd.get_dummies(dataset[[feature]])
@@ -12,7 +21,7 @@ print("Transform some columns of the data")
 
 run = Run.get_context()
 
-filtered_data = run.input_datasets['normalized_data']
+filtered_data = run.input_datasets['filtered_data']
 df = filtered_data.to_pandas_dataframe()
 
 parser = argparse.ArgumentParser("transform")

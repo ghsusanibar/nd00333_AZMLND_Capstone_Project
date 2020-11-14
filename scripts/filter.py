@@ -1,5 +1,6 @@
 import argparse
 import os
+import numpy as np
 from azureml.core import Run
 
 print("Filtering some outliers")
