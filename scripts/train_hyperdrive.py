@@ -14,6 +14,7 @@ parser.add_argument('--data_folder', type=str, dest='data_folder', help='data fo
 parser.add_argument('--num_leaves', type=int, default=32, help='Minimun number of leaves')
 parser.add_argument('--max_depth', type=int, default=3, help='Maximum tree depth')
 parser.add_argument('--min_data_in_leaf', type=int, default=32, help='Minimun amount of data in the leafs')
+parser.add_argument('--learning_rate', type=float, default=0.005, help='Learning rate for training')
 args = parser.parse_args()
 
 print("Split the data into train and test")
@@ -36,7 +37,7 @@ params = {
     'feature_fraction': 0.7,
     'verbose': 1,
     'is_unbalance':True,
-    'learning_rate': 0.005,
+    'learning_rate': args.learning_rate,
     'bagging_fraction': 0.9,
 }
 
