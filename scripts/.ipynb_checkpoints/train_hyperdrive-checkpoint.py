@@ -7,6 +7,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from azureml.core.run import Run
+import joblib
 
 ## Add arguments to script
 parser = argparse.ArgumentParser(description='Cardio Train')
@@ -55,6 +56,9 @@ model_lgbm = lgb.train(
 
 y_pred_lgbm = model_lgbm.predict(X_valid)
 print('LGBM– ' + str(roc_auc_score(y_valid, y_pred_lgbm)))
+
+os.makedirs('./outputs/model/', exist_ok=True)
+joblib.dump(model_lgbm, 'outputs/model/model.pkl')
 
 # Log metrics
 run = Run.get_context()
