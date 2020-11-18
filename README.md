@@ -12,13 +12,13 @@ Table of Contents
       - [AutoML Config](#automl-config)
       - [RunDetails](#rundetails)
       - [Best Model](#best-model)
-      - [Saving Model](#saving-model)
+      - [Save and Register Model](#save-and-register-model)
     + [Hyperdrive Model](#hyperdrive-model)
       - [Pipeline](#pipeline-1)
       - [HyperDrive config](#hyperdrive-config)
       - [RunDetails](#rundetails-1)
       - [Best Model](#best-model-1)
-      - [Saving Model](#saving-model-1)
+      - [Saving Model](#saving-model)
     + [Comparison of the two models](#comparison-of-the-two-models)
     + [Model Deployment](#model-deployment)
       - [Register Model](#register-model)
@@ -84,8 +84,11 @@ After the experiment finished running we got different trained models, each one 
 ![automl](/image/img008.jpg)
 ![automl](/image/img007.jpg)
 
-#### Saving Model
-Once I got the best model of the AutoML experiment, I saved the model in the pickle format. Also I tested the model using the test dataset in order to compare with other models.
+#### Save and Register Model
+Once I got the best model of the AutoML experiment, I saved the model in the pickle format. Also I tested the model using the test dataset in order to compare with other models. Then I registered the model using the register_model method from the AutoML run.
+
+![automl](/image/img056.jpg)
+![automl](/image/img057.jpg)
 
 ### Hyperdrive Model
 
@@ -110,8 +113,11 @@ I used the RunDetails tool in order to get some information about the HyperDrive
 #### Best Model
 Once the HyperDrive experiment finished running we got different trained models, each one with its AUC metric and its hyperparameters. The best model was a LightGBM algorithm with AUC=0.8029 with the following hyperparameters: learning_rate=0.016, max_depth=6, min_data_in_leaf=32 and num_leaves=16.
 
-![hyperdrive](/image/img025.jpg)
 ![hyperdrive](/image/img027.jpg)
+
+We can see the best model in the Azure ML Studio with its metrics and hyperparameters obtained.
+
+![hyperdrive](/image/img058.jpg)
 
 #### Saving Model
 Once I got the best model of the HyperDrive experiment, I saved the model in the pickle format. Also I tested the model using the test dataset in order to compare with the previous model.
